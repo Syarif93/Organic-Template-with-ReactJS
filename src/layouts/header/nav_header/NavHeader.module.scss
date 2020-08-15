@@ -1,0 +1,97 @@
+@import '../../../styles/helpers.module';
+
+.navHeader {
+    padding: 20px 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navigations {
+        ul {
+            display: flex;
+            column-gap: 40px;
+
+            li {
+                a {
+                    font-weight: 800;
+                    font-size: 14px;
+                    transition: .3s;
+
+                    &.active {
+                        color: #7fad39 !important;
+                    }    
+
+                    &:hover {
+                        color: #7fad39;
+                    }
+                }
+            }
+        }
+    }
+
+    .cartsAndLikes {
+        display: flex;
+        column-gap: 20px;
+
+        .likes {
+            a {
+                position: relative;
+
+                span {
+                    width: 15px;
+                    height: 15px;
+                    background-color: #7fad39;
+                    position: absolute;
+                    top: -16px;
+                    left: 16px;
+                    border-radius: 50%;
+                    font-size: 12px;
+                    text-align: center;
+                    color: #ffffff;
+
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        .carts {
+            a {
+                position: relative;
+                display: flex;
+                column-gap: 25px;
+                align-items: center;
+
+                span {
+                    width: 15px;
+                    height: 15px;
+                    background-color: #7fad39;
+                    position: absolute;
+                    top: -11px;
+                    left: 14px;
+                    border-radius: 50%;
+                    font-size: 12px;
+                    text-align: center;
+                    color: #ffffff;
+
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                .soppingCount {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

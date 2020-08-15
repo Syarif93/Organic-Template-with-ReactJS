@@ -1,0 +1,22 @@
+.slick-prev::before, .slick-next::before {
+    color: #000000;
+}
+
+.slick-list {
+    padding: 10px;
+}
+
+.featuredItems-enter {
+    opacity: 0;
+}
+.featuredItems-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+.featuredItems-exit {
+    opacity: 1;
+}
+.featuredItems-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
