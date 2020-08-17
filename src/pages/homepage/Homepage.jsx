@@ -9,7 +9,6 @@ import { AllItems, OrangesItems, FreshMeatsItems, VegetablesItems, FastFoodItems
 import { IconContext } from 'react-icons/lib';
 
 // Image
-import banner from '../../image/banner.jpg'
 import cat1 from '../../image/cat-1.jpg'
 import cat2 from '../../image/cat-2.jpg'
 import cat3 from '../../image/cat-3.jpg'
@@ -76,18 +75,6 @@ const Homepage = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.bannerWrapper}>
-                <div className={styles.emptySpace}></div>
-                <div className={styles.banner} style={{backgroundImage: `url(${banner})`}}>
-                    <div className={styles.bannerText}>
-                        <span>FRUIT FRESH</span>
-                        <h2>Vegetable<br/>100% Organic</h2>
-                        <p>Free Pickup and Delivery Available</p>
-                        <a href="//" className={styles.btnShop}>SHOP NOW</a>
-                    </div>
-                </div>
-            </div>
-
             <div className={styles.sliders}>
                 <Slider 
                     dots={true}

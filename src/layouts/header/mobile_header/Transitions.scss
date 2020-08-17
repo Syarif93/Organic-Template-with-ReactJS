@@ -1,0 +1,20 @@
+.showMenus-enter {
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+.showMenus-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 300ms ease;
+}
+
+.showMenus-exit {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.showMenus-exit-active {
+    transform: translateX(-50%);
+    transition: all 300ms ease;
+}

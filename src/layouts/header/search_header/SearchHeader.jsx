@@ -9,18 +9,22 @@ import { IconContext } from 'react-icons/lib';
 import { FaBars } from 'react-icons/fa';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { FaPhoneAlt } from 'react-icons/fa';
+import banner from '../../../image/banner.jpg'
 
 const SearchHeader = () => {
     const [toggleCatList, setToggleCatList] = useState(false)
+    const [removeBanner, setRemoveBanner] = useState(false)
     const toggleCatListRef = useRef(null)
 
     let location = useLocation()
     useEffect(() => {
         if(location.pathname === "/") {
             setToggleCatList(true)
+            setRemoveBanner(true)
         }
         return () => {
             setToggleCatList(false)
+            setRemoveBanner(false)
         }
     }, [location])
 
@@ -53,30 +57,48 @@ const SearchHeader = () => {
                         </ul>
                     </CSSTransition>
                 </div>
-                <div className={styles.search}>
-                    <div className={styles.inputWrapper}>
-                        <select name="" id="">
-                            <option value="">All Categories</option>
-                            <option value="">Test</option>
-                            <option value="">Test 2</option>
-                        </select>
-                        <IconContext.Provider value={{ size: 20, className: styles.arrowDownIcon }}>
-                            <MdKeyboardArrowDown />
-                        </IconContext.Provider>
-                        <input type="search" placeholder="What do you need?" />
+                <div className={styles.searchBanner}>
+                    <div className={styles.searchPhone}>
+                        <div className={styles.search}>
+                            <div className={styles.inputWrapper}>
+                                <select name="" id="">
+                                    <option value="">All Categories</option>
+                                    <option value="">Test</option>
+                                    <option value="">Test 2</option>
+                                </select>
+                                <IconContext.Provider value={{ size: 20, className: styles.arrowDownIcon }}>
+                                    <MdKeyboardArrowDown />
+                                </IconContext.Provider>
+                                <input type="search" placeholder="What do you need?" />
+                            </div>
+                            <button type="submit">Search</button>
+                        </div>
+                        <div className={styles.phone}>
+                            <div className={styles.phoneIconWrapper}>
+                                <IconContext.Provider value={{ size: 15, className: styles.phoneIcon }}>
+                                    <FaPhoneAlt />
+                                </IconContext.Provider>
+                            </div>
+                            <div className={styles.phoneInfo}>
+                                <h4 className={styles.phoneNumber}>+65 11.188.888</h4>
+                                <span className={styles.phoneDesc}>support 24/7 time</span>
+                            </div>
+                        </div>
                     </div>
-                    <button type="submit">Search</button>
-                </div>
-                <div className={styles.phone}>
-                    <div className={styles.phoneIconWrapper}>
-                        <IconContext.Provider value={{ size: 15, className: styles.phoneIcon }}>
-                            <FaPhoneAlt />
-                        </IconContext.Provider>
-                    </div>
-                    <div className={styles.phoneInfo}>
-                        <h4 className={styles.phoneNumber}>+65 11.188.888</h4>
-                        <span className={styles.phoneDesc}>support 24/7 time</span>
-                    </div>
+                    {
+                        removeBanner && (
+                            <div className={styles.bannerWrapper}>
+                                <div className={styles.banner} style={{backgroundImage: `url(${banner})`}}>
+                                    <div className={styles.bannerText}>
+                                        <span>FRUIT FRESH</span>
+                                        <h2>Vegetable<br/>100% Organic</h2>
+                                        <p>Free Pickup and Delivery Available</p>
+                                        <a href="//" className={styles.btnShop}>SHOP NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }
                 </div>
             </div>
         </div>

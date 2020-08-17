@@ -23,7 +23,7 @@ function App() {
             <Shop />
           </Route>
         </Switch>
-        
+
         <Footer />
       </div>
 

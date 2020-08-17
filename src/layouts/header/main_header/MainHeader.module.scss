@@ -11,13 +11,13 @@
         justify-content: space-between;
         align-items: center;
     }
-
+    
     .leftSide {
         display: flex;
         column-gap: 20px;
         align-items: center;
         position: relative;
-
+        
         .email {
             a {
                 .emailIcon {
@@ -27,43 +27,43 @@
                 }
             }
         }
-
+        
         div {
-           border-right: 1px solid rgba(#000000, .1);
-           padding-right: 20px;
-
-           &:last-child {
-               border: none;
-               padding: 0;
-           }
+            border-right: 1px solid rgba(#000000, .1);
+            padding-right: 20px;
+            
+            &:last-child {
+                border: none;
+                padding: 0;
+            }
         }
     }
-
+    
     .rightSide {
         display: flex;
         column-gap: 20px;
-
+        
         ul {
             display: flex;
             column-gap: 20px;
-
+            
             li.items {
                 border-right: 1px solid rgba(#000000, .1);
                 padding-right: 20px;
-
+                
                 &:last-child {
                     border: none;
                     padding: 0;
                 }
             }
-
+            
             li.socialMedia {
                 ul {
                     display: flex;
                     column-gap: 15px;
                 }
             }
-
+            
             li.authentication {
                 a {
                     display: flex;
@@ -75,4 +75,26 @@
             }
         }
     }
+}
+
+@import '../../../styles/responsive.module';
+
+@include mediaXXL {
+
+}
+
+@include mediaXL {
+
+}
+
+@include mediaLG {
+    
+}
+
+@include mediaMD {
+
+}
+
+@include mediaSM {
+
 }

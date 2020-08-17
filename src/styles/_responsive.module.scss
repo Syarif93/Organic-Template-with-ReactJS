@@ -1,29 +1,44 @@
 @mixin mediaSM {
     @media only screen and (max-width: 550px) {
+        .container {
+            max-width: 300px !important;
+        }
         @content;
     }
 }
 
 @mixin mediaMD {
     @media only screen and (max-width: 700px) {
+        .container {
+            max-width: 468px !important;
+        }
         @content;
     }
 }
 
 @mixin mediaLG {
-    @media only screen and (min-width: 900px) {
+    @media only screen and (max-width: 900px) {
+        .container {
+            max-width: 740px !important;
+        }
         @content;
     }
 }
 
 @mixin mediaXL {
-    @media only screen and (min-width: 1025px) {
+    @media only screen and (max-width: 1025px) {
+        .container {
+            max-width: 850px !important;
+        }
         @content;
     }
 }
 
 @mixin mediaXXL {
-    @media only screen and (min-width: 1250px) {
+    @media only screen and (max-width: 1250px) {
+        .container {
+            max-width: 960px !important;
+        }
         @content;
     }
 }

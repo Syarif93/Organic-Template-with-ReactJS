@@ -1,0 +1,209 @@
+@import '../../../styles/helpers.module';
+
+.mobileHeader {
+    .LogoAndHamburger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+
+        .hamburgerMenu {
+            a {
+                width: 35px;
+                height: 35px;
+                border: 1px solid #000000;
+                display: inline-block;
+                position: relative;
+    
+                .hamburgerMenuIcon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+
+    .cartsAndLikes {
+        display: flex;
+        column-gap: 20px;
+        justify-content: center;
+        padding-bottom: 20px;
+
+        .likes {
+            a {
+                position: relative;
+
+                span {
+                    width: 15px;
+                    height: 15px;
+                    background-color: #7fad39;
+                    position: absolute;
+                    top: -16px;
+                    left: 16px;
+                    border-radius: 50%;
+                    font-size: 12px;
+                    text-align: center;
+                    color: #ffffff;
+
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        .carts {
+            a {
+                position: relative;
+                display: flex;
+                column-gap: 25px;
+                align-items: center;
+
+                span {
+                    width: 15px;
+                    height: 15px;
+                    background-color: #7fad39;
+                    position: absolute;
+                    top: -11px;
+                    left: 14px;
+                    border-radius: 50%;
+                    font-size: 12px;
+                    text-align: center;
+                    color: #ffffff;
+
+                    p {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                .soppingCount {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .activeMenus {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0, .5);
+        z-index: 98;
+        transition: all .6s;
+    }
+
+    .navMenus {
+        padding: 50px 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        background-color: #ffffff;
+        z-index: 99;
+
+        .logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cartsAndLikes {
+            justify-content: start;
+            padding: 20px 0;
+        }
+
+        .authentications {
+            padding-bottom: 20px;
+            a {
+                .userIcon {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .navigations {
+            padding-bottom: 20px;
+
+            ul {
+                li {
+                    border-bottom: 1px solid #e1e1e1;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+
+                    a {
+                        font-weight: 800;
+                        font-size: 14px;
+                        transition: .3s;
+
+                        &.active {
+                            color: #7fad39 !important;
+                        }    
+
+                        &:hover {
+                            color: #7fad39;
+                        }
+                    }
+                }
+            }
+        }
+
+        .socialMedia {
+            padding-bottom: 20px;
+
+            ul {
+                display: flex;
+                column-gap: 15px;
+            }
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            font-size: 14px;
+            
+            .email {
+                a {
+                    .emailIcon {
+                        margin-right: 5px;
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@import '../../../styles/responsive.module';
+
+@include mediaXXL {
+
+}
+
+@include mediaXL {
+
+}
+
+@include mediaLG {
+    
+}
+
+@include mediaMD {
+
+}
+
+@include mediaSM {
+
+}
