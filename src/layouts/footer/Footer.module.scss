@@ -39,6 +39,8 @@
         .linksWrapper {
             display: flex;
             column-gap: 40px;
+            -moz-column-gap: 40px;
+            -webkit-column-gap: 40px;
 
             ul {
                 font-size: 14px;
@@ -108,6 +110,8 @@
         ul {
             display: flex;
             column-gap: 20px;
+            -moz-column-gap: 20px;
+            -webkit-column-gap: 20px;
 
             li {
                 a {

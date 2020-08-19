@@ -12,6 +12,8 @@
         ul {
             display: flex;
             column-gap: 40px;
+            -moz-column-gap: 40px;
+            -webkit-column-gap: 40px;
 
             li {
                 a {
@@ -34,6 +36,8 @@
     .cartsAndLikes {
         display: flex;
         column-gap: 20px;
+        -moz-column-gap: 20px;
+        -webkit-column-gap: 20px;
 
         .likes {
             a {
@@ -66,6 +70,8 @@
                 position: relative;
                 display: flex;
                 column-gap: 25px;
+                -moz-column-gap: 25px;
+                -webkit-column-gap: 25px;
                 align-items: center;
 
                 span {

@@ -28,6 +28,8 @@
     .cartsAndLikes {
         display: flex;
         column-gap: 20px;
+        -moz-column-gap: 20px;
+        -webkit-column-gap: 20px;
         justify-content: center;
         padding-bottom: 20px;
 
@@ -62,6 +64,8 @@
                 position: relative;
                 display: flex;
                 column-gap: 25px;
+                -moz-column-gap: 25px;
+                -webkit-column-gap: 25px;
                 align-items: center;
 
                 span {
@@ -163,6 +167,8 @@
             ul {
                 display: flex;
                 column-gap: 15px;
+                -moz-column-gap: 15px;
+                -webkit-column-gap: 15px;
             }
         }
 

@@ -46,7 +46,10 @@ const MobileHeader = () => {
                         </a>
                     </div>
                     <div className={styles.hamburgerMenu}>
-                        <a href="//" onClick={() => setShowMenus(true)}>
+                        <a href="//" onClick={(e) => {
+                            e.preventDefault()
+                            setShowMenus(true)
+                        }}>
                             <IconContext.Provider value={{ size: 22, className: styles.hamburgerMenuIcon }}>
                                 <FaBars />
                             </IconContext.Provider>
@@ -86,7 +89,10 @@ const MobileHeader = () => {
                         <a href="//">
                             <img src={logo} alt="Logo"/>
                         </a>
-                        <a href="//" onClick={() => setShowMenus(false)}>
+                        <a href="//" onClick={(e) => {
+                            e.preventDefault()
+                            setShowMenus(false)}
+                            }>
                             <IconContext.Provider value={{ color: "#DC143C", size: 35, className: styles.closeIcon }}>
                                 <AiOutlineCloseSquare />
                             </IconContext.Provider>

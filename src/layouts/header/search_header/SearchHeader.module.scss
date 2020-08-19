@@ -19,6 +19,8 @@
             align-items: center;
             justify-content: space-between;
             column-gap: 20px;
+            -moz-column-gap: 20px;
+            -webkit-column-gap: 20px;
             color: #ffffff;
 
             .titleWrapper {
@@ -60,6 +62,8 @@
         .searchPhone {
             display: flex;
             column-gap: 40px;
+            -moz-column-gap: 40px;
+            -webkit-column-gap: 40px;
 
             .search {
                 width: 100%;
@@ -80,6 +84,8 @@
                     padding: 5px 0;
                     display: flex;
                     column-gap: 10px;
+                    -moz-column-gap: 10px;
+                    -webkit-column-gap: 10px;
                     
                     input {
                         width: 100%;
@@ -107,6 +113,8 @@
                 display: flex;
                 align-items: center;
                 column-gap: 20px;
+                -moz-column-gap: 20px;
+                -webkit-column-gap: 20px;
         
                 .phoneIconWrapper {
                     background-color: #f5f5f5;

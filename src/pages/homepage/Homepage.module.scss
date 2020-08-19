@@ -58,6 +58,8 @@
         ul.featuredControls {
             display: flex;
             column-gap: 20px;
+            -moz-column-gap: 20px;
+            -webkit-column-gap: 20px;
             justify-content: center;
             position: relative;
 
@@ -177,6 +179,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
     padding: 40px 0;
 
     .banner {
@@ -250,6 +254,8 @@
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         column-gap: 30px;
+        -moz-column-gap: 20px;
+        -webkit-column-gap: 20px;
 
         .blogText {
             padding: 20px 0;
@@ -258,6 +264,8 @@
                 display: flex;
                 align-items: center;
                 column-gap: 20px;
+                -moz-column-gap: 20px;
+                -webkit-column-gap: 20px;
                 color: #b2b2b2;
 
                 li {
