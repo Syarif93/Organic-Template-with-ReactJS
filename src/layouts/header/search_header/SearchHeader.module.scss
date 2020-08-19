@@ -3,7 +3,7 @@
 .searchHeader {
     .container {
         display: grid;
-        grid-template-columns: 22% auto;
+        grid-template-columns: 25% auto;
         justify-items: stretch;
         column-gap: 40px;
     }
@@ -17,11 +17,17 @@
             background-color: #7fad39;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             column-gap: 20px;
             color: #ffffff;
 
-            .arrowDownIcon {
-                margin-left: 20px;
+            .titleWrapper {
+                display: flex;
+                align-items: center;
+
+                .barsIcon {
+                    margin-right: 20px;
+                }
             }
         }
 
@@ -60,7 +66,7 @@
                 display: flex;
                 
                 button {
-                    width: 20%;
+                    width: 35%;
                     background-color: #7fad39;
                     border: none;
                     color: #ffffff;
@@ -68,33 +74,18 @@
                 }
                 
                 .inputWrapper {
-                    width: 80%;
+                    width: 100%;
                     border: 1px solid #ebebeb;
                     height: 50px;
                     padding: 5px 0;
-                    position: relative;
-        
-                    select {
-                        width: 30%;
-                        height: 100%;
-                        border: none;
-                        border-right: 1px solid #ebebeb;
-                        padding: 0 20px;
-                        appearance: none;
-                        -moz-appearance: none;
-                        -webkit-appearance: none;
-                        cursor: pointer;
-        
-                        option {
-                            text-align: center;
-                            cursor: pointer;
-                        }
-                    }
-        
+                    display: flex;
+                    column-gap: 10px;
+                    
                     input {
-                        width: 70%;
+                        width: 100%;
                         height: 100%;
                         border: none;
+                        border-left: 1px solid #ebebeb;
                         padding: 0 20px;
                         transition: .3s;
         
@@ -108,12 +99,6 @@
                                 transition: .3s;
                             }
                         }
-                    }
-        
-                    .arrowDownIcon {
-                        position: absolute;
-                        top: 15px;
-                        left: 118px;
                     }
                 }
             }
@@ -218,11 +203,19 @@
 }
 
 @include mediaLG {
-    
+    .searchHeader {
+        .container {
+            grid-template-columns: repeat(1, auto);
+            row-gap: 20px;
+        }
+    }
 }
 
 @include mediaMD {
-
+    .searchPhone {
+        flex-direction: column;
+        row-gap: 20px;
+    }
 }
 
 @include mediaSM {

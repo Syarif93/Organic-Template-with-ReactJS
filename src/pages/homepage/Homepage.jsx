@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import styles from './Homepage.module.scss'
-import Slider from 'react-slick'
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import './Slider.scss'
+import AliceCarousel from 'react-alice-carousel'
+import "react-alice-carousel/lib/scss/alice-carousel.scss";
+import './Transitions.scss'
 import { CSSTransition } from 'react-transition-group';
 import { AllItems, OrangesItems, FreshMeatsItems, VegetablesItems, FastFoodItems } from './FeaturedProductItems';
 import { IconContext } from 'react-icons/lib';
@@ -56,6 +55,23 @@ const Homepage = () => {
         setNavWidth(width)
     }
 
+    const items = [cat1, cat2, cat3, cat4, cat5]
+    const images = items.map(i => (
+            <div className={styles.item}>
+                <img key={i} src={i} alt="cat" />
+                <h5>
+                    <a href="//">Vegetables</a>
+                </h5>
+            </div>
+        ))
+    const responsive = {
+        550: { items: 1 },
+        700: { items: 2 },
+        900: { items: 3 },
+        1025: { items: 3 },
+        1250: { items: 4 },
+    }
+
     const NavItem = (props) => {
         return (
             <li >
@@ -76,51 +92,14 @@ const Homepage = () => {
     return (
         <div className={styles.container}>
             <div className={styles.sliders}>
-                <Slider 
-                    dots={true}
-                    infinite={true}
-                    slidesToShow={4}
-                    slidesToScroll={1}
-                    autoplay={true}
-                    autoplaySpeed={5000}
-                    pauseOnHover={true} >
-                        <div className={styles.slider}>
-                            <img src={cat1} alt="Item"/>
-                            <h5>
-                                <a href="//">Vegetables</a>
-                            </h5>
-                        </div>
-                        <div className={styles.slider}>
-                            <img src={cat2} alt="Item"/>
-                            <h5>
-                                <a href="//">Dried Fruit</a>
-                            </h5>
-                        </div>
-                        <div className={styles.slider}>
-                            <img src={cat3} alt="Item"/>
-                            <h5>
-                                <a href="//">Vegetables</a>
-                            </h5>
-                        </div>
-                        <div className={styles.slider}>
-                            <img src={cat4} alt="Item"/>
-                            <h5>
-                                <a href="//">Vegetables</a>
-                            </h5>
-                        </div>
-                        <div className={styles.slider}>
-                            <img src={cat5} alt="Item"/>
-                            <h5>
-                                <a href="//">Fresh Meat</a>
-                            </h5>
-                        </div>
-                        <div className={styles.slider}>
-                            <img src={cat1} alt="Item"/>
-                            <h5>
-                                <a href="//">Fresh Fruit</a>
-                            </h5>
-                        </div>
-                </Slider>
+                <AliceCarousel
+                    mouseTrackingEnabled={true}
+                    items={images}
+                    responsive={responsive}
+                    buttonsDisabled={true}
+                    autoPlay={true}
+                    autoPlayInterval={5000}
+                    fadeOutAnimation={true} />
             </div>
 
             <div className={styles.featuredProduct}>
@@ -199,16 +178,14 @@ const Homepage = () => {
             </div>
 
             <div className={styles.banners}>
-                <div className={styles.banner}>
-                    <img src={banner1} alt="Banner1"/>
+                <div className={styles.banner} style={{backgroundImage: `url(${banner1})`}}>
                     <div className={styles.bannerText}>
                         <h3>Summer Fruit</h3>
                         <p>100% Pure Nature Fruit Juice</p>
                         <a href="//">SHOP NOW</a>
                     </div>
                 </div>
-                <div className={styles.banner}>
-                    <img src={banner2} alt="Banner2"/>
+                <div className={styles.banner} style={{backgroundImage: `url(${banner2})`}}>
                     <div className={styles.bannerText}>
                         <h3>Dried & Drink Fruits</h3>
                         <p>With 25% off All Teas</p>

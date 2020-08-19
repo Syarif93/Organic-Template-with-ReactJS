@@ -7,12 +7,16 @@
     .container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "abouts links contacts";
         padding: 50px 0;
     }
 
     .abouts {
+        grid-area: abouts;
+
         .logo {
             margin-bottom: 15px;
+            width: fit-content;
         }
 
         ul {
@@ -25,6 +29,8 @@
     }
 
     .links {
+        grid-area: links;
+
         h6 {
             font-size: 16px;
             margin-bottom: 15px;
@@ -52,6 +58,8 @@
     }
 
     .contacts {
+        grid-area: contacts;
+
         h6 {
             font-size: 16px;
             margin-bottom: 15px;
@@ -126,4 +134,43 @@
             }
         }
     }
+}
+
+@import '../../styles/responsive.module';
+
+@include mediaXXL {
+
+}
+
+@include mediaXL {
+
+}
+
+@include mediaLG {
+    .footer {
+        .container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 
+                "abouts links"
+                "contacts contacts";
+            row-gap: 30px;
+        }
+    }
+}
+
+@include mediaMD {
+    .footer {
+        .container {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "abouts"
+                "links"
+                "contacts";
+            row-gap: 30px;
+        }
+    }
+}
+
+@include mediaSM {
+    
 }

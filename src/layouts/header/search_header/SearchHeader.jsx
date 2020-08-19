@@ -11,32 +11,46 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import { FaPhoneAlt } from 'react-icons/fa';
 import banner from '../../../image/banner.jpg'
 
-const SearchHeader = () => {
+const SearchHeader = (props) => {
     const [toggleCatList, setToggleCatList] = useState(false)
     const [removeBanner, setRemoveBanner] = useState(false)
     const toggleCatListRef = useRef(null)
 
     let location = useLocation()
     useEffect(() => {
-        if(location.pathname === "/") {
+        if(location.pathname === "/" && props.matches !== true) {
             setToggleCatList(true)
+        }
+        if (location.pathname === "/") {
             setRemoveBanner(true)
         }
         return () => {
             setToggleCatList(false)
             setRemoveBanner(false)
         }
-    }, [location])
+    }, [location, props.matches])
+
+    useEffect(() => {
+        props.matches && setToggleCatList(false)
+        return () => {
+            setToggleCatList(true)
+        }
+    }, [props.matches])
 
     return (
         <div className={styles.searchHeader}>
             <div className={styles.container}>
                 <div className={styles.categories}>
-                    <a href="//" onClick={() => setToggleCatList(!toggleCatList)}>
-                        <IconContext.Provider value={{ size: 16, className: styles.barsIcon }}>
-                            <FaBars />
-                        </IconContext.Provider>
-                        <h4 className={styles.title}>Categories</h4>
+                    <a href="//" onClick={(e) => {
+                        e.preventDefault()
+                        setToggleCatList(!toggleCatList)
+                        }}>
+                        <div className={styles.titleWrapper}>
+                            <IconContext.Provider value={{ size: 16, className: styles.barsIcon }}>
+                                <FaBars />
+                            </IconContext.Provider>
+                            <h4 className={styles.title}>Categories</h4>
+                        </div>
                         <IconContext.Provider value={{ size: 20, className: styles.arrowDownIcon }}>
                             <MdKeyboardArrowDown />
                         </IconContext.Provider>
@@ -61,14 +75,6 @@ const SearchHeader = () => {
                     <div className={styles.searchPhone}>
                         <div className={styles.search}>
                             <div className={styles.inputWrapper}>
-                                <select name="" id="">
-                                    <option value="">All Categories</option>
-                                    <option value="">Test</option>
-                                    <option value="">Test 2</option>
-                                </select>
-                                <IconContext.Provider value={{ size: 20, className: styles.arrowDownIcon }}>
-                                    <MdKeyboardArrowDown />
-                                </IconContext.Provider>
                                 <input type="search" placeholder="What do you need?" />
                             </div>
                             <button type="submit">Search</button>

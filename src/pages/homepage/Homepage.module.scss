@@ -2,18 +2,19 @@
 
 .sliders {
     width: 100%;
-    padding: 40px 0;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
 
-    .slider {
+    .item {
         position: relative;
-
+        
         h5 {
             position: absolute;
-            left: -11px;
-            width: 100%;
-            padding: 0 40px;
-            bottom: 20px;
-            text-align: center;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 0);
+            display: inline;
 
             a {
                 font-size: 14px;
@@ -21,7 +22,7 @@
                 font-weight: 700;
                 text-transform: uppercase;
                 letter-spacing: 2px;
-                padding: 12px 0 10px;
+                padding: 12px 15px;
                 background: #ffffff;
                 display: block;
             }
@@ -179,6 +180,11 @@
     padding: 40px 0;
 
     .banner {
+        width: 100%;
+        height: 270px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left center;
         position: relative;
 
         .bannerText {
@@ -211,18 +217,6 @@
                 letter-spacing: 2px;
                 font-weight: 700;
             }
-        }
-    }
-
-    .banner:first-child {
-        .bannerText {
-            right: 40px;
-        }
-    }
-
-    .banner:last-child {
-        .bannerText {
-            right: 80px;
         }
     }
 }
@@ -299,4 +293,68 @@
             }
         }
     }
+}
+
+@import '../../styles/responsive.module';
+
+@include mediaXXL {
+    .featuredProduct {
+        .featuredWrapper {
+            ul.featuredItems {
+                li {
+                    ul {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaXL {
+
+}
+
+@include mediaLG {
+    .featuredProduct {
+        .featuredWrapper {
+            ul.featuredItems {
+                li {
+                    ul {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+            }
+        }
+    }
+
+    .banners {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 20px;
+    }
+}
+
+@include mediaMD {
+    .featuredProduct {
+        .featuredWrapper {
+            ul.featuredItems {
+                li {
+                    ul {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+                }
+            }
+        }
+    }
+
+    .fromTheBlog {
+        .blogContents {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@include mediaSM {
+    
 }

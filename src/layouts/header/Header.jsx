@@ -23,7 +23,7 @@ const Header = () => {
                     <MobileHeader />
                 )
             }
-            <SearchHeader />
+            <SearchHeader matches={matches} />
         </header>
     )
 }
