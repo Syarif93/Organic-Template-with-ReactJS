@@ -10,7 +10,7 @@ import Shop from './pages/shop/Shop';
 
 function App() {
   return (
-    <Router basename="Organic-Template-with-ReactJS">
+    <Router basename="ogani">
       <div className={styles.App}>
         <Header />
 
