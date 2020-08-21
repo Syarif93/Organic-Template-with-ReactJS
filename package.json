@@ -2,7 +2,7 @@
   "name": "vegetable-organic",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Syarif93.github.io/ogani",
+  "homepage": "http://Syarif93.github.io/Organic-Template-with-ReactJS",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
