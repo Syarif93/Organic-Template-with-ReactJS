@@ -27,13 +27,12 @@
 
     .cartsAndLikes {
         display: flex;
-        column-gap: 20px;
-        -moz-column-gap: 20px;
-        -webkit-column-gap: 20px;
         justify-content: center;
         padding-bottom: 20px;
 
         .likes {
+            margin-right: 20px;
+
             a {
                 position: relative;
 
@@ -63,9 +62,6 @@
             a {
                 position: relative;
                 display: flex;
-                column-gap: 25px;
-                -moz-column-gap: 25px;
-                -webkit-column-gap: 25px;
                 align-items: center;
 
                 span {
@@ -90,6 +86,7 @@
 
                 .soppingCount {
                     font-size: 14px;
+                    margin-left: 25px;
                 }
             }
         }
@@ -166,19 +163,25 @@
 
             ul {
                 display: flex;
-                column-gap: 15px;
-                -moz-column-gap: 15px;
-                -webkit-column-gap: 15px;
+
+                li {
+                    margin-right: 15px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
             }
         }
 
         .contact {
             display: flex;
             flex-direction: column;
-            row-gap: 10px;
             font-size: 14px;
             
             .email {
+                margin-bottom: 10px;
+                
                 a {
                     .emailIcon {
                         margin-right: 5px;

@@ -14,13 +14,12 @@
     
     .leftSide {
         display: flex;
-        column-gap: 20px;
-        -moz-column-gap: 20px;
-        -webkit-column-gap: 20px;
         align-items: center;
         position: relative;
         
         .email {
+            margin-right: 20px;
+            
             a {
                 .emailIcon {
                     margin-right: 5px;
@@ -43,17 +42,14 @@
     
     .rightSide {
         display: flex;
-        column-gap: 20px;
         
         ul {
             display: flex;
-            column-gap: 20px;
-            -moz-column-gap: 20px;
-            -webkit-column-gap: 20px;
             
             li.items {
                 border-right: 1px solid rgba(#000000, .1);
                 padding-right: 20px;
+                margin-right: 20px;
                 
                 &:last-child {
                     border: none;
@@ -64,9 +60,14 @@
             li.socialMedia {
                 ul {
                     display: flex;
-                    column-gap: 15px;
-                    -moz-column-gap: 15px;
-                    -webkit-column-gap: 15px;
+                    
+                    li {
+                        margin-right: 15px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
                 }
             }
             
@@ -74,6 +75,7 @@
                 a {
                     display: flex;
                     align-items: center;
+                    
                     .userIcon {
                         margin-right: 10px;
                     }

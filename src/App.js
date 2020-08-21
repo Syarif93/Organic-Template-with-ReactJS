@@ -9,9 +9,8 @@ import Homepage from './pages/homepage/Homepage';
 import Shop from './pages/shop/Shop';
 
 function App() {
-  
   return (
-    <Router>
+    <Router basename="Organic-Template-with-ReactJS">
       <div className={styles.App}>
         <Header />
 

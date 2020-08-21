@@ -78,6 +78,7 @@ const Homepage = () => {
                 <a 
                     href="//" 
                     onClick={(e) => {
+                        e.preventDefault()
                         props.goToItem && setActivNav(props.goToItem)
                         calcLeft(e.target)
                         calcWidth(e.target)
