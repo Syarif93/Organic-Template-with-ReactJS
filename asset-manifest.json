@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Organic-Template-with-ReactJS/static/css/main.f514aa14.chunk.css",
-    "main.js": "/Organic-Template-with-ReactJS/static/js/main.7de2c52f.chunk.js",
-    "main.js.map": "/Organic-Template-with-ReactJS/static/js/main.7de2c52f.chunk.js.map",
+    "main.css": "/Organic-Template-with-ReactJS/static/css/main.e7cac6cc.chunk.css",
+    "main.js": "/Organic-Template-with-ReactJS/static/js/main.940a472b.chunk.js",
+    "main.js.map": "/Organic-Template-with-ReactJS/static/js/main.940a472b.chunk.js.map",
     "runtime-main.js": "/Organic-Template-with-ReactJS/static/js/runtime-main.f4c8171b.js",
     "runtime-main.js.map": "/Organic-Template-with-ReactJS/static/js/runtime-main.f4c8171b.js.map",
     "static/css/2.8338d550.chunk.css": "/Organic-Template-with-ReactJS/static/css/2.8338d550.chunk.css",
     "static/js/2.5072c616.chunk.js": "/Organic-Template-with-ReactJS/static/js/2.5072c616.chunk.js",
     "static/js/2.5072c616.chunk.js.map": "/Organic-Template-with-ReactJS/static/js/2.5072c616.chunk.js.map",
     "index.html": "/Organic-Template-with-ReactJS/index.html",
-    "precache-manifest.fc77fd35542baf7d823ca94ec43edf0d.js": "/Organic-Template-with-ReactJS/precache-manifest.fc77fd35542baf7d823ca94ec43edf0d.js",
+    "precache-manifest.98d70682e2d15e98380d4c078cd714d6.js": "/Organic-Template-with-ReactJS/precache-manifest.98d70682e2d15e98380d4c078cd714d6.js",
     "service-worker.js": "/Organic-Template-with-ReactJS/service-worker.js",
     "static/css/2.8338d550.chunk.css.map": "/Organic-Template-with-ReactJS/static/css/2.8338d550.chunk.css.map",
-    "static/css/main.f514aa14.chunk.css.map": "/Organic-Template-with-ReactJS/static/css/main.f514aa14.chunk.css.map",
+    "static/css/main.e7cac6cc.chunk.css.map": "/Organic-Template-with-ReactJS/static/css/main.e7cac6cc.chunk.css.map",
     "static/js/2.5072c616.chunk.js.LICENSE.txt": "/Organic-Template-with-ReactJS/static/js/2.5072c616.chunk.js.LICENSE.txt",
     "static/media/banner-1.jpg": "/Organic-Template-with-ReactJS/static/media/banner-1.f830fce4.jpg",
     "static/media/banner-2.jpg": "/Organic-Template-with-ReactJS/static/media/banner-2.28c17f63.jpg",
@@ -38,7 +38,7 @@
     "static/js/runtime-main.f4c8171b.js",
     "static/css/2.8338d550.chunk.css",
     "static/js/2.5072c616.chunk.js",
-    "static/css/main.f514aa14.chunk.css",
-    "static/js/main.7de2c52f.chunk.js"
+    "static/css/main.e7cac6cc.chunk.css",
+    "static/js/main.940a472b.chunk.js"
   ]
 }
