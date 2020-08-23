@@ -1,4 +1,4 @@
-@import '../../../styles/helpers.module';
+@import '../../../../styles/helpers.module';
 
 .mainHeader {
     background-color: #f5f5f5;
@@ -85,7 +85,7 @@
     }
 }
 
-@import '../../../styles/responsive.module';
+@import '../../../../styles/responsive.module';
 
 @include mediaXXL {
 

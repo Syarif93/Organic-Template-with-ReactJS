@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Footer.module.scss'
-import logo from '../../image/logo.png'
+import logo from '../../../image/logo.png'
 import { IconContext } from 'react-icons/lib'
 
 // Icons

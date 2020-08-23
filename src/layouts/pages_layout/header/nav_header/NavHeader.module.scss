@@ -1,4 +1,4 @@
-@import '../../../styles/helpers.module';
+@import '../../../../styles/helpers.module';
 
 .navHeader {
     padding: 20px 0;
@@ -102,7 +102,7 @@
     }
 }
 
-@import '../../../styles/responsive.module';
+@import '../../../../styles/responsive.module';
 
 @include mediaXXL {
 

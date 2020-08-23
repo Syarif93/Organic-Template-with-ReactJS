@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styles from './MobileHeader.module.scss'
-import logo from '../../../image/logo.png'
+import logo from '../../../../image/logo.png'
 import { IconContext } from 'react-icons/lib'
 import { CSSTransition } from 'react-transition-group';
 import { NavLink } from 'react-router-dom';

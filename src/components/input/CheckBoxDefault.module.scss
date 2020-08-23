@@ -1,0 +1,43 @@
+.checkBoxDefault {
+    display: flex;
+    align-items: center;
+    
+    input:checked ~ .checkBoxWrapper .checkmark {
+        opacity: 1;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+        z-index: 10;
+
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    .checkBoxWrapper {
+        position: relative;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #7fad39;
+        border-radius: 3px;
+        margin-right: 5px;
+        cursor: pointer;
+    
+    
+        .checkmark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #7fad39;
+            opacity: 0;
+        }
+    }
+}

@@ -9,6 +9,9 @@ import { FaInstagram } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
+// Redux
+import { Link } from 'react-router-dom';
+
 const MainHeader = () => {
     return (
         <div className={styles.mainHeader}>
@@ -54,12 +57,12 @@ const MainHeader = () => {
                             </ul>
                         </li>
                         <li className={`${styles.items} ${styles.authentication}`}>
-                            <a href="//">
+                            <Link to="/login">
                                 <IconContext.Provider value={{ size: 16, className: styles.userIcon }}>
                                     <FaUser />
                                 </IconContext.Provider>
                                 Login
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

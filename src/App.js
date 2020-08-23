@@ -1,29 +1,31 @@
 import React from 'react';
 import styles from './App.module.scss'
-import Header from './layouts/header/Header';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Footer from './layouts/footer/Footer';
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
+
+// Layouts
+import AppRoute from './layouts/AppRoute';
+import pagesLayout from './layouts/pages_layout/pagesLayout';
+import authLayout from './layouts/auth_layout/authLayout';
 
 // Pages
 import Homepage from './pages/homepage/Homepage';
 import Shop from './pages/shop/Shop';
 
+// Authentications
+import Login from './auth/login/Login'
+import Register from './auth/register/Register'
+
 function App() {
+  
   return (
     <Router basename="Organic-Template-with-ReactJS">
       <div className={styles.App}>
-        <Header />
-
         <Switch>
-          <Route exact path="/">
-            <Homepage />
-          </Route>
-          <Route exact path="/shop">
-            <Shop />
-          </Route>
+          <AppRoute exact path="/" layout={pagesLayout} component={Homepage} />
+          <AppRoute exact path="/shop" layout={pagesLayout} component={Shop} />
+          <AppRoute exact path="/login" layout={authLayout} component={Login} />
+          <AppRoute exact path="/register" layout={authLayout} component={Register} />
         </Switch>
-
-        <Footer />
       </div>
 
     </Router>

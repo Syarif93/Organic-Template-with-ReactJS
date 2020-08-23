@@ -1,4 +1,4 @@
-@import '../../../styles/helpers.module';
+@import '../../../../styles/helpers.module';
 
 .searchHeader {
     .container {
@@ -189,7 +189,7 @@
     }
 }
 
-@import '../../../styles/responsive.module';
+@import '../../../../styles/responsive.module';
 
 @include mediaXXL {
 

@@ -1,1 +1,23 @@
-@import '../../styles/helpers.module'
+@import '../../styles/helpers.module';
+
+@import '../../styles/responsive.module';
+
+@include mediaXXL {
+
+}
+
+@include mediaXL {
+
+}
+
+@include mediaLG {
+
+}
+
+@include mediaMD {
+
+}
+
+@include mediaSM {
+    
+}

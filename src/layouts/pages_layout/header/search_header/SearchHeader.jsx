@@ -9,7 +9,7 @@ import { IconContext } from 'react-icons/lib';
 import { FaBars } from 'react-icons/fa';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { FaPhoneAlt } from 'react-icons/fa';
-import banner from '../../../image/banner.jpg'
+import banner from '../../../../image/banner.jpg'
 
 const SearchHeader = (props) => {
     const [toggleCatList, setToggleCatList] = useState(false)
@@ -41,7 +41,7 @@ const SearchHeader = (props) => {
         <div className={styles.searchHeader}>
             <div className={styles.container}>
                 <div className={styles.categories}>
-                    <a href="//" onClick={(e) => {
+                    <a href="/#/" onClick={(e) => {
                         e.preventDefault()
                         setToggleCatList(!toggleCatList)
                         }}>
@@ -57,17 +57,17 @@ const SearchHeader = (props) => {
                     </a>
                     <CSSTransition in={toggleCatList} timeout={300} nodeRef={toggleCatListRef} unmountOnExit classNames="toggleCatList">
                         <ul className={styles.categoryList} ref={toggleCatListRef}>
-                            <li><a href="//">Fresh Meat</a></li>
-                            <li><a href="//">Vegetables</a></li>
-                            <li><a href="//">Fruit & Nut Gifts</a></li>
-                            <li><a href="//">Fresh Berries</a></li>
-                            <li><a href="//">Ocean Food</a></li>
-                            <li><a href="//">Butter & Eggs</a></li>
-                            <li><a href="//">Fast Foods</a></li>
-                            <li><a href="//">Fresh Union</a></li>
-                            <li><a href="//">Papaya & Crisps</a></li>
-                            <li><a href="//">Oatmeal</a></li>
-                            <li><a href="//">Fresh Bananas</a></li>
+                            <li><a href="/#/">Fresh Meat</a></li>
+                            <li><a href="/#/">Vegetables</a></li>
+                            <li><a href="/#/">Fruit & Nut Gifts</a></li>
+                            <li><a href="/#/">Fresh Berries</a></li>
+                            <li><a href="/#/">Ocean Food</a></li>
+                            <li><a href="/#/">Butter & Eggs</a></li>
+                            <li><a href="/#/">Fast Foods</a></li>
+                            <li><a href="/#/">Fresh Union</a></li>
+                            <li><a href="/#/">Papaya & Crisps</a></li>
+                            <li><a href="/#/">Oatmeal</a></li>
+                            <li><a href="/#/">Fresh Bananas</a></li>
                         </ul>
                     </CSSTransition>
                 </div>
@@ -99,7 +99,7 @@ const SearchHeader = (props) => {
                                         <span>FRUIT FRESH</span>
                                         <h2>Vegetable<br/>100% Organic</h2>
                                         <p>Free Pickup and Delivery Available</p>
-                                        <a href="//" className={styles.btnShop}>SHOP NOW</a>
+                                        <a href="/#/" className={styles.btnShop}>SHOP NOW</a>
                                     </div>
                                 </div>
                             </div>
