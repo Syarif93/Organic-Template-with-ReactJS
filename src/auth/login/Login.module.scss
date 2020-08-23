@@ -60,3 +60,9 @@
         }
     }
 }
+
+@media only screen and (max-width: 550px) {
+    .contentWrapper {
+        width: 300px !important;
+    }
+}
