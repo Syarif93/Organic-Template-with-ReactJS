@@ -3,7 +3,7 @@ import styles from './MobileHeader.module.scss'
 import logo from '../../../../image/logo.png'
 import { IconContext } from 'react-icons/lib'
 import { CSSTransition } from 'react-transition-group';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './Transitions.scss'
 
 // Icons
@@ -120,12 +120,12 @@ const MobileHeader = () => {
                         </div>
                     </div>
                     <div className={styles.authentications}>
-                        <a href="//">
+                        <Link to="/login">
                             <IconContext.Provider value={{ size: 16, className: styles.userIcon }}>
                                 <FaUser />
                             </IconContext.Provider>
                             Login
-                        </a>
+                        </Link>
                     </div>
                     <div className={styles.navigations}>
                         <ul>

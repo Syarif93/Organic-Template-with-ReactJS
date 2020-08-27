@@ -334,6 +334,14 @@
                 li {
                     ul {
                         grid-template-columns: repeat(2, 1fr);
+
+                        li {
+                            .image {
+                                .actions {
+                                    opacity: 1;
+                                }
+                            }
+                        }
                     }
                 }
             }

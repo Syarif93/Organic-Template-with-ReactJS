@@ -1,5 +1,204 @@
 @import '../../styles/helpers.module';
 
+.shop {
+    padding-top: 45px;
+
+    .container {
+        display: grid;
+        grid-template-columns: 25% auto;
+        column-gap: 40px;
+    }
+
+    .categories {
+        h4 {
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        ul {
+            li {
+                a {
+                    padding: 10px 0;
+                    background-color: unset;
+                    display: block;
+                    color: #1c1c1c;
+                    transition: .3s;
+
+                    &:hover {
+                        color: #7fad39;
+                    }
+                }
+            }
+        }
+    }
+
+    .products {
+        .sliders {
+            max-width: 100%;
+            object-fit: cover;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+
+            .img {
+                position: relative;
+
+                .discount {
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    width: 45px;
+                    height: 45px;
+                    background-color: #dd2222;
+                    border-radius: 50%;
+
+                    span {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #ffffff;
+                        font-size: 14px;
+                    }
+                }
+            }
+            
+            .productText {
+                text-align: center;
+                padding-top: 60px;
+                position: relative;
+
+                .textWrap {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+
+                    h5 {
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                        font-weight: 400;
+
+                        a {
+                            &:hover {
+                                color: #7fad39;
+                            }
+                        }
+                    }
+    
+                    p {
+                        font-size: 18px;
+                        font-weight: 700;
+    
+                        span {
+                            color: #b2b2b2;
+                            font-size: 14px;
+                            font-weight: 400;
+                            margin-left: 10px;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
+
+        .productsList {
+            margin-top: 40px;
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
+                gap: 20px;
+
+                li {
+                    &:hover {
+                        .image {
+                            .actions {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    .image {
+                        position: relative;
+
+                        .actions {
+                            opacity: 0;
+                            transition: opacity 1s ease;
+
+                            .addToCart {
+                                position: absolute;
+                                bottom: 22px;
+                                left: 50%;
+                                transform: translate(-50%, 0);
+                                background-color: #ffffff;
+                                padding: 10px 30px;
+                                color: #252525;
+                                transition: .3s ease;
+                                white-space: nowrap;
+
+                                &:hover {
+                                    color: #ffffff;
+                                    background-color: #7fad39;
+                                }
+                            }
+
+                            .favorite {
+                                position: absolute;
+                                top: 20px;
+                                right: 20px;
+                                width: 35px;
+                                height: 35px;
+                                box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+                                border-radius: 50%;
+                                transition: .3s ease;
+
+                                &:hover {
+                                    box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+                                }
+
+                                .likeIcon {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                }
+                            }
+                        }
+                    }
+
+                    .itemText {
+                        text-align: center;
+                        margin-top: 10px;
+
+                        h6 {
+                            font-size: 16px;
+                            font-weight: 400;
+                            margin-bottom: 10px;
+
+                            a {
+                                color: #252525;
+                                transition: .3s;
+
+                                &:hover {
+                                    color: #7fad39;
+                                }
+                            }
+                        }
+
+                        h5 {
+                            color: #252525;
+                            font-weight: 700;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @import '../../styles/responsive.module';
 
 @include mediaXXL {
@@ -7,15 +206,36 @@
 }
 
 @include mediaXL {
-
+    .shop {
+        .products {
+            .productsList {
+                ul {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
 }
 
 @include mediaLG {
-
+    .shop {
+        .container {
+            grid-template-columns: 1fr;
+            row-gap: 40px;
+        }
+    }
 }
 
 @include mediaMD {
-
+    .shop {
+        .products {
+            .productsList {
+                ul {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
 }
 
 @include mediaSM {
